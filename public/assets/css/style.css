@@ -1,0 +1,113 @@
+
+  	.jumbotron {
+  		background-image: url("../images/rez-up-front-img-2.jpg");
+  		background-size: cover;
+  		min-height: 700px;
+  		color:#fff;
+  		font-family:Montserrat;
+
+  	}
+
+    #logo {
+      width: 90%;
+    }
+  	.navbar {
+  	
+  	    margin:0; /*add this*/
+  	}
+
+  	#frontcontainer {
+  		margin-top: 550px;
+
+  	}
+
+
+  	.form .form-inline {
+  		margin-right: 0;
+  	}
+
+  	.form-control{
+
+  		height:50px;
+
+  		margin: 10px;
+
+  	}
+	.frontlable label {
+		font-size: 20px;
+		text-shadow: 2px 5px 4px #000000;
+	}
+
+	.btn-xl {
+	    padding: 10px 20px;
+	    font-size: 20px;
+	    border-radius: 10px;
+	    border: 2px solid #000200;
+	    color:#ffe821;
+	}
+
+	h2 {
+	    color: white;
+	    text-shadow: 2px 5px 4px #000000;
+	    font-size: 40px;
+	}
+
+  #signInBtn {
+    margin-right: 10px; 
+  }
+
+  #ListPropertyButton {
+    margin-right: 15px;
+    font-family:Montserrat;
+    font-size: 15px;
+
+  }
+
+  
+
+    .container {
+      margin-top: 50px;
+
+    }
+
+    #logo {
+      width: 150px;
+    }
+
+ 
+
+
+  #each_row {
+    margin-bottom: 30px;
+    border:1px solid grey;
+    border-radius: 5px;
+    padding: 20px 0px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #form{
+    width: 600px;
+    background-image: url('http://veristream.com/wp-content/uploads/contact-form-background.jpg')
+  }
+
+  #formDiv{
+    width: 400px;
+    margin: auto;
+  }
+
+  #amenities label{
+   margin-left: 0px;
+  }
+
+  #cbox label{
+    margin: auto;
+    margin-left: 15px;
+    display:inline-block;
+
+  }
+
+  #ckBox label{
+    margin-left: 15px;
+    display:inline-block;
+  }
+ 
