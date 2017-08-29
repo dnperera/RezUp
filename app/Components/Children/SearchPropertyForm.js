@@ -1,6 +1,6 @@
 //Include React
 var React = require("react");
-import $ from 'jquery';
+var Link = require("react-router").Link;
 
 // Include the Helper (for the saved recall)
 var helpers = require("../utils/helpers");
@@ -65,34 +65,32 @@ var SearchPropertyForm = React.createClass({
 
   // Here we describe this component's render method
   render: function() {
-
         const listings = this.state.listings.map((listing, i) => {
-        const image_src = JSON.parse(listing.images)[0]["url"];
-        console.log('img path',image_src);
-        return(
-
-          <div key={i} className="row" id="each_row">
-            <div className="col-md-3">
-              <img src={image_src} className="img-thumbnail w3-hover-opacity" />
-            </div>
-            <div className="col-md-9">
-              <div>
-                <h3>{ listing.venueName }</h3>
+          const image = JSON.parse(listing.images)[0]
+          const image_src = image ? image.url : ""
+          return(
+            <div key={i} className="row" id="each_row">
+              <div className="col-md-3">
+                <img src={image_src} className="img-thumbnail w3-hover-opacity" />
               </div>
-              <div>
-                <ul>
-                  <li>Venue Type: { listing.venueType }</li>
-                  <li>Occupancy: { listing.occupancy }</li>
-                  <li>Amenities: { listing.amenities[0] } | { listing.amenities[1] } </li>
-                </ul>
+              <div className="col-md-9">
+                <div>
+                  <h3>{ listing.venueName }</h3>
+                </div>
+                <div>
+                  <ul>
+                    <li>Venue Type: { listing.venueType }</li>
+                    <li>Occupancy: { listing.occupancy }</li>
+                    <li>Amenities: { listing.amenities[0] } | { listing.amenities[1] } </li>
+                  </ul>
+                </div>
               </div>
+              <Link to={"/property/" + listing._id} className="btn-primary btn-md" data={listing._id} id="details">View</Link>
             </div>
-            <button className="btn-primary btn-md" data ="{listing._id}" id="details">View</button>
-          </div>
 
-        );
+          );
 
-    });
+      });
     // console.log(listings);
     return (
       <div id="maincontainer">
