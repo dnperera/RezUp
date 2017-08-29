@@ -48,19 +48,43 @@ var SearchPropertyForm = React.createClass({
           "<li>Venue Type: "+res.data[i].venueType+"</li>"+
           "<li>Occupancy: "+res.data[i].occupancy+"</li>"+
           "<li>Amenities: "+res.data[i].amenities[0]+" | "+res.data[i].amenities[1]+" </li>"+
-          "</ul></div></div><button class='btn-primary btn-md' data ='"+res.data[i]._id+"' id='details'>View</button></div>";
+          "</ul></div></div><button class='btn-primary btn-md' data ='"+res.data[i]._id+"' id='details'data-toggle='modal' data-target='#myModal'>View</button></div>";
        }
 
 
       $("#maincontainer").append(propertyStr+"</div>");
 
-       $('button').on("click" ,function(){
-        console.log("This is data value"+$(this).attr("data"));
+      var sample ='<div class="modal fade" id="myModal" role="dialog">'+
+                     '<div class="modal-dialog">'+
+                      '<div class="modal-content">'+
+                        '<div class="modal-header">'+
+                          '<button type="button" class="close" data-dismiss="modal">&times;</button>'+
+                            '<h4 class="modal-title">Modal Header</h4>'+
+                              '</div>'+
+                              '<div class="modal-body">'+
+                                '<p>Some text in the modal.</p>'+
+                              '</div>'+
+                              '<div class="modal-footer">'+
+                                '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>'+
+                              '</div>'+
+                            '</div>'+
+                          '</div>'
+                        '</div>';
 
-         var cont = "<div class='container'>"
+      //var modal = document.getElementById('myModal');
 
+       // $('button').on("click" ,function(){
+       //  console.log("This is data value"+$(this).attr("data"));
+       //  modal.style.display = "block";
+       //   var cont = "<div class='container'>"
 
-        });
+       //  });
+
+//        window.onclick = function(event) {
+//        if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
 
     })
     //this.setState({city: "",dateFrom: "",dateTo: ""})
