@@ -54,7 +54,7 @@ var SearchPropertyForm = React.createClass({
 
       $("#maincontainer").append(propertyStr+"</div>");
 
-      var sample ='<div class="modal fade" id="myModal" role="dialog">'+
+      var sample ='<div class="modal" id="myModal" role="dialog">'+
                      '<div class="modal-dialog">'+
                       '<div class="modal-content">'+
                         '<div class="modal-header">'+
@@ -70,7 +70,22 @@ var SearchPropertyForm = React.createClass({
                             '</div>'+
                           '</div>'
                         '</div>';
+      $("#myModal").modal();             
 
+      // var sample = '<div id="dialog-modal" title="Basic modal dialog">'+
+      //                 '<p>Adding the modal overlay screen makes the dialog look more prominent because it dims          out the page content.</p>'+
+      //               '</div>';
+      //     $(function() {
+      //       $( "#dialog-modal" ).dialog({
+      //         height: 140,
+      //         modal: true
+      //         });
+      //       });
+          
+
+
+
+       //$("#maincontainer").html(sample);
       //var modal = document.getElementById('myModal');
 
        // $('button').on("click" ,function(){
