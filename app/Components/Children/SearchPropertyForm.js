@@ -21,7 +21,7 @@ var SearchPropertyForm = React.createClass({
      this.setState({ [event.target.name]: event.target.value });
 
   },
- 
+
   handleSubmit: function(e) {
     e.preventDefault();
     console.log(this.state.city);
@@ -36,6 +36,7 @@ var SearchPropertyForm = React.createClass({
        var propertyStr ="<div class='container'>";
 
        for(var i=0; i< res.data.length;i++) {
+          // console.log()
           propertyStr = propertyStr +
           "<div class='row' id='each_row'>"+
           "<div class='col-md-3'>"+
@@ -47,11 +48,19 @@ var SearchPropertyForm = React.createClass({
           "<li>Venue Type: "+res.data[i].venueType+"</li>"+
           "<li>Occupancy: "+res.data[i].occupancy+"</li>"+
           "<li>Amenities: "+res.data[i].amenities[0]+" | "+res.data[i].amenities[1]+" </li>"+
-          "</ul></div></div></div>";
+          "</ul></div></div><button class='btn-primary btn-md' data ='"+res.data[i]._id+"' id='details'>View</button></div>";
        }
 
 
       $("#maincontainer").append(propertyStr+"</div>");
+
+       $('button').on("click" ,function(){
+        console.log("This is data value"+$(this).attr("data"));
+
+         var cont = "<div class='container'>"
+
+
+        });
 
     })
     //this.setState({city: "",dateFrom: "",dateTo: ""})
