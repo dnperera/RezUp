@@ -80,4 +80,12 @@ router.get('/saved/:city',function(req,res){
 
 });
 
+router.get('/property/:id', function(req, res) {
+  PostAdd.find({ _id: req.params.id}, function(err, doc) {
+    if (err) throw err;
+    console.log(doc)
+    res.json(doc)
+  })
+})
+
 module.exports = router;

@@ -34,6 +34,10 @@ var helpers = {
 	    console.log("axios results", results);
 	    return results;
 	  });
+	},
+
+	getListingById: function(propertyId) {
+		return axios.get("/api/authentication/property/" + propertyId)
 	}
 
 };

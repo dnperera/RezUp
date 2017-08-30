@@ -30,6 +30,10 @@ var PostAdd = new Schema({
     amenities: [{
     type: String
 }],
+  description:{
+    
+    type: String,
+  },
    address: {
     type: String,
     

@@ -69,6 +69,7 @@ var ListProperty = React.createClass({
         days: this.state.days,
         time: this.state.time,
         price: this.state.price,
+        description:this.state.description,
         address:this.state.address,
         city:this.state.city,
         state:this.state.state,
@@ -97,7 +98,8 @@ var ListProperty = React.createClass({
       state: "",
       postal: "",
       country: "",
-      images: ""
+      images: "",
+      description:""
     });
 
   },
@@ -195,7 +197,12 @@ var ListProperty = React.createClass({
                 <label><Checkbox value="Pool"/> Parking</label>
               </CheckboxGroup>
           </div>
-          
+            <div className="form-group ">
+            <label className="control-label" for="description">
+              About the property 
+            </label>
+              <textarea className="form-control" name="description" value={this.state.description} onChange={this.handleChange}></textarea>
+            </div>
             <div className="form-group ">
             <label className="control-label" for="address">
               Address
@@ -245,7 +252,7 @@ var ListProperty = React.createClass({
              <label className="control-label" for="days">
               Days 
              </label>
-              <input className="form-control" value={this.state.days} onChange={this.handleChange} id="days" name="days" placeholder="MM/DD/YYYY" type="text" />
+              <input className="form-control" value={this.state.days} onChange={this.handleChange} id="days" name="days" type="text" />
             </div>
             </div>
 
