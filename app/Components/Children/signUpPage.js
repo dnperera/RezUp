@@ -51,7 +51,7 @@ var SignUp = React.createClass({
             
             <div className="modal-dialog modal-sm" role="document">
                 <div className="modal-content">
-                    <div className="modal-header"> <h3> Regise with RezUp! </h3> </div>
+                    <div className="modal-header"> <h3> Register with RezUp! </h3> </div>
                     <div className="modal-body">
                     
                       <form className="form" id="registrationForm" onSubmit ={this.handleSubmit}>
