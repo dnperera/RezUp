@@ -52,5 +52,8 @@
   "bugs": {
     "url": "https://github.com/dnperera/RezUp/issues"
   },
-  "homepage": "https://github.com/dnperera/RezUp#readme"
+
+  "engines": {
+  "node": "7.7.4"
+  }
 }
